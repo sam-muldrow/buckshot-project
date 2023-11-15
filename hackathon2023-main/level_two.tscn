@@ -1,0 +1,69 @@
+[gd_scene load_steps=13 format=3 uid="uid://chx8omyak5v4r"]
+
+[ext_resource type="PackedScene" uid="uid://bb5r16orojlbf" path="res://TileMap.tscn" id="1_xclny"]
+[ext_resource type="PackedScene" uid="uid://ckj557bmxn2n7" path="res://player.tscn" id="2_kpk4w"]
+[ext_resource type="PackedScene" uid="uid://dlaxpgt8k536i" path="res://CameraDrone.tscn" id="3_kdr8n"]
+[ext_resource type="Texture2D" uid="uid://i7ookbg7ubxx" path="res://Backgrounds/8/Day/1.png" id="4_sodtb"]
+[ext_resource type="Texture2D" uid="uid://ccgj2n1o3dd3e" path="res://Backgrounds/8/Day/2.png" id="5_jkvow"]
+[ext_resource type="Texture2D" uid="uid://dguv7afnkihav" path="res://Backgrounds/8/Day/3.png" id="6_yeajy"]
+[ext_resource type="Texture2D" uid="uid://3fvmevm4h2d6" path="res://Backgrounds/8/Day/5.png" id="7_57xcd"]
+[ext_resource type="PackedScene" uid="uid://dpj40imlwjyxg" path="res://finish_node.tscn" id="8_s4rcc"]
+[ext_resource type="PackedScene" uid="uid://d1hgvspw0q057" path="res://death_scene.tscn" id="9_qyct0"]
+[ext_resource type="PackedScene" uid="uid://bh3twa4qgp44j" path="res://LevelComplete.tscn" id="10_wy1ue"]
+[ext_resource type="AudioStream" uid="uid://doyjrtvdqimv2" path="res://looperman-l-3109920-0325996-8-bit-loop.wav" id="11_cembc"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_6oyes"]
+vertices = PackedVector2Array(1147, -37, 457, -36, 461, -96, 1145, -635, 2, -640, 446, -99, 2, -100)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(4, 5, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(2, -640, 2, -100, 446, -99, 461, -96, 457, -36, 1147, -37, 1145, -635)])
+
+[node name="level_two" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_xclny")]
+layer_0/tile_data = PackedInt32Array(-196608, 65537, 8, -196607, 65537, 8, -196606, 65537, 8, -196605, 65537, 8, -196604, 65537, 8, -196603, 65537, 8, -196602, 65537, 8, -196601, 65537, 8, -196600, 65537, 8, -196599, 65537, 8, -131062, 1, 6, -65526, 1, 6, -65525, 65537, 5, -131061, 65537, 5, -196597, 1, 2, -196596, 1, 2, -196598, 65537, 1, -196595, 65537, 2, -65524, 65537, 5, -131060, 65537, 5, -131059, 1, 7, -65523, 65537, 7, -65522, 1, 2, -65521, 1, 2, -65520, 1, 2, -65519, 1, 2, -65518, 1, 2, -65517, 1, 2, -65516, 1, 2, -65515, 1, 2, -65514, 1, 2, -65513, 1, 2, -65512, 1, 2, -65511, 1, 2, -65510, 1, 2, -65509, 1, 2, -65508, 1, 2, -65507, 1, 2, -65506, 1, 2, -65505, 1, 2, -65504, 1, 2, -65503, 1, 2, -65502, 1, 2, -65501, 1, 2, -1, 1, 12, -65537, 1, 12, -131073, 1, 12, -196609, 1, 12, -262145, 1, 12, -327681, 1, 12, -393217, 1, 12, -458753, 1, 12, -524289, 1, 12, -589825, 1, 12, -655361, 1, 12, -720897, 1, 12, -786433, 1, 12, -851969, 1, 12, -917505, 1, 12, -983041, 1, 12, -1048577, 1, 12, -1114113, 1, 12, -1179649, 1, 12, -1245185, 1, 12, -1310721, 1, 12, -1376256, 1, 12, -1376255, 1, 12, -1376254, 1, 12, -1376253, 1, 12, -1376252, 1, 12, -1376251, 1, 12, -1376250, 1, 12, -1376249, 1, 12, -1376248, 1, 12, -1376247, 1, 12, -1376246, 1, 12, -1376245, 1, 12, -1376244, 1, 12, -1376243, 1, 12, -1376242, 1, 12, -1376241, 1, 12, -1441777, 1, 12, -1441776, 1, 12, -1441775, 1, 12, -1376238, 1, 12, -1376237, 1, 12, -1376236, 1, 12, -1376235, 1, 12, -1376239, 1, 12, -1376240, 1, 12, -1376234, 1, 12, -1376233, 1, 12, -1376232, 1, 12, -1376231, 1, 12, -1376230, 1, 12, -1376229, 1, 12, -1376228, 1, 12, -1376227, 1, 12, -1376226, 1, 12, -1376225, 1, 12, -1376224, 1, 12, -1376223, 1, 12, -1376222, 1, 12, -1376221, 1, 12, -1376220, 1, 12, -1310684, 1, 12, -1245148, 1, 12, -1179612, 1, 12, -1114076, 1, 12, -1048540, 1, 12, -983004, 1, 12, -917468, 1, 12, -851932, 1, 12, -786396, 1, 12, -720860, 1, 12, -655324, 1, 12, -655323, 1, 12, -589787, 1, 12, -589788, 1, 12, -524252, 1, 12, -458716, 1, 12, -393180, 1, 12, -327644, 1, 12, -262108, 1, 12, -196572, 1, 12, -131036, 1, 12, -65500, 1, 12, 10, 1, 6, 11, 65537, 5, 12, 65537, 5, 13, 65537, 5, 14, 65537, 5, 15, 65537, 5, 16, 65537, 5, 17, 65537, 5, 18, 65537, 5, 19, 65537, 5, 20, 65537, 5, 21, 65537, 5, 22, 65537, 5, 23, 65537, 5, 24, 65537, 5, 25, 65537, 5, 26, 65537, 5, 27, 65537, 5, 28, 65537, 5, 29, 65537, 5, 30, 65537, 5, 31, 65537, 5, 32, 65537, 5, 33, 65537, 5, 34, 65537, 5, 35, 65537, 5)
+
+[node name="Player" parent="." instance=ExtResource("2_kpk4w")]
+position = Vector2(142, -419)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, -316)
+
+[node name="Sky" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(576.25, -316.5)
+scale = Vector2(1.99913, 1.99691)
+texture = ExtResource("4_sodtb")
+
+[node name="BuildingsLevel1" type="Sprite2D" parent="Sky"]
+texture = ExtResource("5_jkvow")
+
+[node name="BuildingsLevel2" type="Sprite2D" parent="Sky/BuildingsLevel1"]
+texture = ExtResource("6_yeajy")
+
+[node name="BuildingsLevel3" type="Sprite2D" parent="Sky/BuildingsLevel1/BuildingsLevel2"]
+texture = ExtResource("7_57xcd")
+
+[node name="FinishNode" parent="." instance=ExtResource("8_s4rcc")]
+position = Vector2(1138, -370)
+scale = Vector2(1.394, 33.813)
+
+[node name="CameraDrone" parent="." instance=ExtResource("3_kdr8n")]
+position = Vector2(755, -62)
+
+[node name="CameraDrone2" parent="." instance=ExtResource("3_kdr8n")]
+position = Vector2(844, -62)
+
+[node name="death_scene" parent="." instance=ExtResource("9_qyct0")]
+offset_top = -640.0
+offset_bottom = -640.0
+
+[node name="LevelCompleteDisplay" parent="." instance=ExtResource("10_wy1ue")]
+offset_top = -640.0
+offset_bottom = -640.0
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_6oyes")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_cembc")
+autoplay = true

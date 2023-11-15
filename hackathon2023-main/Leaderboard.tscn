@@ -1,0 +1,1231 @@
+[gd_scene load_steps=6 format=3 uid="uid://uvocn8ek1km"]
+
+[ext_resource type="FontFile" uid="uid://nj5b3hat322u" path="res://Fonts/04B_30__.TTF" id="1_2xgm5"]
+[ext_resource type="Script" path="res://Leaderboard.gd" id="1_dpdgu"]
+[ext_resource type="Script" path="res://BackButton.gd" id="2_qrro8"]
+[ext_resource type="Texture2D" uid="uid://rsxt7qapb7nr" path="res://Backgrounds/1/Night/3.png" id="4_56gf3"]
+[ext_resource type="Texture2D" uid="uid://ctptiahku5d45" path="res://Backgrounds/1/Night/5.png" id="5_inm2y"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dpdgu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1147.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = 36.0
+offset_right = 572.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="LeadboardText" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0.152941, 1)
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 44
+text = "Leaderboard:"
+horizontal_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 20
+tab_alignment = 1
+clip_tabs = false
+
+[node name="Level One" type="TabBar" parent="MarginContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+
+[node name="vbox1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="2_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="3_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="4_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="5_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="6_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="7_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="8_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="9_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="10_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level One/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Level Two" type="TabBar" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+
+[node name="vbox1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="2_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="3_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="4_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="5_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="6_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="7_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="8_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="9_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="10_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Two/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Level Three" type="TabBar" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+
+[node name="vbox1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="2_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="3_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="4_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="5_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="6_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="7_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="8_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="9_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="10_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Three/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Level Four" type="TabBar" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+
+[node name="vbox1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="2_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="3_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="4_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="5_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="6_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="7_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="8_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="9_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="10_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Four/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Level Five" type="TabBar" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+
+[node name="vbox1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/1_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="2_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/2_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="3_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/3_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="4_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/4_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="5_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/5_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="6_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/6_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="7_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/7_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="8_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/8_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="9_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/9_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="10_levelOneScoreLine" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Level Five/vbox1/10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("1_2xgm5")
+theme_override_font_sizes/font_size = 25
+text = "Back"
+script = ExtResource("2_qrro8")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(290, 677)
+texture = ExtResource("4_56gf3")
+
+[node name="4" type="Sprite2D" parent="."]
+position = Vector2(865, 684)
+texture = ExtResource("4_56gf3")
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(287, 679)
+texture = ExtResource("5_inm2y")
+
+[node name="6" type="Sprite2D" parent="."]
+position = Vector2(856, 678)
+scale = Vector2(1.02778, 1)
+texture = ExtResource("5_inm2y")
+
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]

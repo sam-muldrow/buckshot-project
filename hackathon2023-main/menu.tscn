@@ -1,0 +1,139 @@
+[gd_scene load_steps=10 format=3 uid="uid://v16gnbdei1ax"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_ycvir"]
+[ext_resource type="Texture2D" uid="uid://rsxt7qapb7nr" path="res://Backgrounds/1/Night/3.png" id="2_skaq8"]
+[ext_resource type="Texture2D" uid="uid://ctptiahku5d45" path="res://Backgrounds/1/Night/5.png" id="3_taoqs"]
+[ext_resource type="Texture2D" uid="uid://j33rqthvtxg4" path="res://IndustrialTileset/2 Background/buckshot.png" id="8_gc2d1"]
+[ext_resource type="FontFile" uid="uid://nj5b3hat322u" path="res://Fonts/04B_30__.TTF" id="8_srvh2"]
+
+[sub_resource type="Theme" id="Theme_a8k1m"]
+
+[sub_resource type="Theme" id="Theme_sdnaf"]
+
+[sub_resource type="Theme" id="Theme_ympo6"]
+
+[sub_resource type="Theme" id="Theme_natqo"]
+Button/styles/normal = null
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_ycvir")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1162.0
+offset_bottom = 670.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 331.0
+offset_top = 66.0
+offset_right = 812.0
+offset_bottom = 288.0
+theme = SubResource("Theme_a8k1m")
+expand_mode = 1
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(286, 587)
+texture = ExtResource("2_skaq8")
+
+[node name="4" type="Sprite2D" parent="."]
+position = Vector2(861, 594)
+texture = ExtResource("2_skaq8")
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(283, 589)
+texture = ExtResource("3_taoqs")
+
+[node name="6" type="Sprite2D" parent="."]
+position = Vector2(852, 588)
+scale = Vector2(1.02778, 1)
+texture = ExtResource("3_taoqs")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -208.0
+offset_top = 54.0
+offset_right = 208.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_sdnaf")
+theme_override_constants/separation = 16
+
+[node name="Start Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_ympo6")
+theme_override_fonts/font = ExtResource("8_srvh2")
+theme_override_font_sizes/font_size = 28
+text = "Start"
+
+[node name="Leaderboard Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_srvh2")
+theme_override_font_sizes/font_size = 28
+text = "Leaderboard"
+
+[node name="Options Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_natqo")
+theme_override_fonts/font = ExtResource("8_srvh2")
+theme_override_font_sizes/font_size = 28
+text = "Options"
+
+[node name="Quit Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_srvh2")
+theme_override_font_sizes/font_size = 28
+text = "Quit"
+
+[node name="Buckshot" type="Sprite2D" parent="."]
+position = Vector2(597, 176)
+scale = Vector2(0.64, 0.496)
+texture = ExtResource("8_gc2d1")
+
+[node name="10_levelOneScoreLine" type="HBoxContainer" parent="."]
+offset_left = 14.0
+offset_top = -31.0
+offset_right = 217.0
+offset_bottom = 3.0
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_srvh2")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="UserId" type="Label" parent="10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_srvh2")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="10_levelOneScoreLine"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_srvh2")
+theme_override_font_sizes/font_size = 34
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Leaderboard Button" to="." method="_on_leaderboard_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,151 @@
+[gd_scene load_steps=21 format=3 uid="uid://ckj557bmxn2n7"]
+
+[ext_resource type="Script" path="res://Scripts/Player/PlayerGunLaunch.cs" id="1_ytv6j"]
+[ext_resource type="Texture2D" uid="uid://cwkka7btrs58x" path="res://PlayerSprites/3 Cyborg/Hands/3.png" id="2_7kr4r"]
+[ext_resource type="Texture2D" uid="uid://c8k33h3lmekwb" path="res://PlayerSprites/Guns/3_1.png" id="3_16dys"]
+[ext_resource type="Texture2D" uid="uid://d3cu3g2vdcvpi" path="res://PlayerSprites/3 Cyborg/Cyborg_death.png" id="4_cgsiu"]
+[ext_resource type="Texture2D" uid="uid://e0qwxf1r08qo" path="res://PlayerSprites/3 Cyborg/Idle1.png" id="4_sqw2t"]
+[ext_resource type="Texture2D" uid="uid://derbow5ufknt1" path="res://PlayerSprites/3 Cyborg/Jump1.png" id="6_wxieu"]
+[ext_resource type="AudioStream" uid="uid://2lw6pfl4521c" path="res://507017__mrthenoronha__gun-shot-2-8-bit.wav" id="7_6vp30"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6ls1"]
+atlas = ExtResource("4_cgsiu")
+region = Rect2(0, 0, 25, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81mux"]
+atlas = ExtResource("4_cgsiu")
+region = Rect2(49, 0, 25, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ulj3"]
+atlas = ExtResource("4_cgsiu")
+region = Rect2(98, 0, 25, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv56b"]
+atlas = ExtResource("4_cgsiu")
+region = Rect2(147, 0, 25, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1k2e"]
+atlas = ExtResource("4_cgsiu")
+region = Rect2(196, 0, 25, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ma1gk"]
+atlas = ExtResource("4_cgsiu")
+region = Rect2(245, 0, 25, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs3lf"]
+atlas = ExtResource("4_sqw2t")
+region = Rect2(0, 0, 24, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3vfa"]
+atlas = ExtResource("4_sqw2t")
+region = Rect2(48, 0, 24, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq1gl"]
+atlas = ExtResource("4_sqw2t")
+region = Rect2(96, 0, 24, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txwsv"]
+atlas = ExtResource("4_sqw2t")
+region = Rect2(144, 0, 24, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oiwml"]
+atlas = ExtResource("6_wxieu")
+region = Rect2(1, 0, 24, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0ww4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6ls1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81mux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ulj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gv56b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1k2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ma1gk")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs3lf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3vfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq1gl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txwsv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiwml")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_611lr"]
+size = Vector2(22, 36)
+
+[node name="Player" type="Node2D"]
+
+[node name="PlayerBody" type="CharacterBody2D" parent="." node_paths=PackedStringArray("_refireTimer", "PlayerSprite", "ShotSound") groups=["Player"]]
+collision_layer = 2
+script = ExtResource("1_ytv6j")
+_refireTimer = NodePath("RefireTimer")
+PlayerSprite = NodePath("PlayerSprite")
+ShotSound = NodePath("ShotSound")
+
+[node name="Hands" type="Sprite2D" parent="PlayerBody"]
+position = Vector2(7, 0)
+texture = ExtResource("2_7kr4r")
+
+[node name="GunSprite" type="Sprite2D" parent="PlayerBody/Hands"]
+position = Vector2(13, -3)
+texture = ExtResource("3_16dys")
+
+[node name="BulletRay" type="RayCast2D" parent="PlayerBody/Hands/GunSprite"]
+position = Vector2(13, -2)
+target_position = Vector2(400, 0)
+collision_mask = 5
+
+[node name="BulletVisual" type="Line2D" parent="PlayerBody/Hands/GunSprite"]
+visible = false
+position = Vector2(13, -2)
+points = PackedVector2Array(0, 0, 400, 0)
+width = 1.0
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="PlayerBody"]
+sprite_frames = SubResource("SpriteFrames_u0ww4")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="PlayerCollider" type="CollisionShape2D" parent="PlayerBody"]
+position = Vector2(2, 7)
+shape = SubResource("RectangleShape2D_611lr")
+
+[node name="RefireTimer" type="Timer" parent="PlayerBody"]
+wait_time = 0.5
+one_shot = true
+
+[node name="ShotSound" type="AudioStreamPlayer" parent="PlayerBody"]
+stream = ExtResource("7_6vp30")

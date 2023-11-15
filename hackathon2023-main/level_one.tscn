@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=3 uid="uid://ben5n4uvbgclj"]
+
+[ext_resource type="PackedScene" uid="uid://bb5r16orojlbf" path="res://TileMap.tscn" id="1_71ka7"]
+[ext_resource type="PackedScene" uid="uid://ckj557bmxn2n7" path="res://player.tscn" id="2_cbkf4"]
+[ext_resource type="Texture2D" uid="uid://i7ookbg7ubxx" path="res://Backgrounds/8/Day/1.png" id="4_kphro"]
+[ext_resource type="Texture2D" uid="uid://ccgj2n1o3dd3e" path="res://Backgrounds/8/Day/2.png" id="5_kmnop"]
+[ext_resource type="Texture2D" uid="uid://dguv7afnkihav" path="res://Backgrounds/8/Day/3.png" id="6_t7c3t"]
+[ext_resource type="Texture2D" uid="uid://3fvmevm4h2d6" path="res://Backgrounds/8/Day/5.png" id="7_ybidf"]
+[ext_resource type="PackedScene" uid="uid://dpj40imlwjyxg" path="res://finish_node.tscn" id="8_h52mn"]
+[ext_resource type="AudioStream" uid="uid://doyjrtvdqimv2" path="res://looperman-l-3109920-0325996-8-bit-loop.wav" id="9_ri4d1"]
+[ext_resource type="PackedScene" uid="uid://bh3twa4qgp44j" path="res://LevelComplete.tscn" id="9_yrw71"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_qdg85"]
+vertices = PackedVector2Array(1, -644, 1152, -642, 1152, 13, -6, 12)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1, -644, 1152, -642, 1152, 13, -6, 12)])
+
+[node name="level_one" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_71ka7")]
+layer_0/tile_data = PackedInt32Array(-65534, 1, 30, -131070, 1, 30, -196606, 1, 30, -262142, 1, 30, -327678, 1, 30, -393214, 1, 30, -458750, 1, 30, -524286, 1, 30, -589822, 1, 30, -655358, 1, 30, -720894, 1, 30, -65531, 1, 30, -131067, 1, 30, -196603, 1, 30, -262139, 1, 30, -327675, 1, 30, -393211, 1, 30, -458747, 1, 30, -524283, 1, 30, -589819, 1, 30, -655355, 1, 30, -720891, 1, 30, -65528, 1, 30, -131064, 1, 30, -196600, 1, 30, -262136, 1, 30, -327672, 1, 30, -393208, 1, 30, -458744, 1, 30, -524280, 1, 30, -589816, 1, 30, -655352, 1, 30, -720888, 1, 30, -65525, 1, 30, -131061, 1, 30, -196597, 1, 30, -262133, 1, 30, -327669, 1, 30, -393205, 1, 30, -458741, 1, 30, -524277, 1, 30, -589813, 1, 30, -655349, 1, 30, -720885, 1, 30, -786432, 1, 2, -786431, 1, 2, -786430, 1, 2, -786429, 1, 2, -786428, 1, 2, -786427, 1, 2, -786426, 1, 2, -786425, 1, 2, -786424, 1, 2, -786423, 1, 2, -786422, 1, 2, -786421, 1, 2, -786420, 1, 2, -786419, 1, 2, -983040, 1, 11, -983039, 1, 11, -983038, 1, 11, -983037, 1, 11, -983036, 1, 11, -983035, 1, 11, -983034, 1, 11, -983033, 1, 11, -983032, 1, 11, -983031, 1, 11, -983030, 1, 11, -983029, 1, 11, -983028, 1, 11, -983027, 1, 11, -786418, 1, 37, -786417, 1, 37, -786416, 1, 37, -786415, 1, 37, -786414, 65537, 37, -917504, 65537, 9, -917503, 65537, 9, -917502, 65537, 9, -917501, 1, 14, -917499, 65537, 9, -917498, 65537, 9, -917497, 65537, 9, -917496, 1, 14, -917494, 65537, 9, -917493, 65537, 9, -917492, 65537, 9, -917491, 65537, 14, -917500, 65537, 9, -917495, 65537, 9, -851968, 65537, 23, -851967, 65537, 23, -851966, 65537, 23, -851965, 65537, 23, -851964, 65537, 23, -851963, 65537, 23, -851962, 65537, 23, -851961, 65537, 23, -851960, 65537, 23, -851959, 65537, 23, -851958, 65537, 23, -851957, 65537, 23, -851956, 65537, 23, -851955, 65537, 23, -720897, 1, 12, -786433, 1, 12, -851969, 1, 12, -917505, 1, 12, -655361, 65537, 32, -589825, 65537, 32, -524289, 65537, 32, -458753, 65537, 32, -393217, 65537, 32, -327681, 65537, 32, -262145, 65537, 32, -196609, 65537, 32, -131073, 65537, 32, -65537, 65537, 32, -1, 65537, 32, 65535, 65537, 32, 36, 65537, 32, -65500, 65537, 32, -131036, 65537, 32, -196572, 65537, 32, -262108, 65537, 32, -327644, 65537, 32, -393180, 65537, 32, -458716, 65537, 32, -524252, 65537, 32, -589788, 65537, 32, -655324, 65537, 32, -720860, 65537, 32, -786396, 65537, 32, -851932, 65537, 32, -917468, 65537, 32, -983004, 65537, 32, -1048540, 65537, 32, -1114076, 65537, 32, -1179612, 65537, 32, -1245148, 65537, 32, -1310684, 65537, 32, -1376220, 65537, 32, -1376221, 65537, 32, -1376222, 65537, 32, -1376223, 65537, 32, -1376224, 65537, 32, -1376225, 65537, 32, -1376226, 65537, 32, -1376227, 65537, 32, -1376228, 65537, 32, -1376229, 65537, 32, -1376230, 65537, 32, -1376231, 65537, 32, -1376232, 65537, 32, -1376233, 65537, 32, -1376234, 65537, 32, -1376235, 65537, 32, -1376236, 65537, 32, -1376237, 65537, 32, -1376238, 65537, 32, -1376239, 65537, 32, -1376242, 65537, 32, -1376243, 65537, 32, -1376244, 65537, 32, -1376245, 65537, 32, -1376246, 65537, 32, -1376247, 65537, 32, -1376248, 65537, 32, -1376249, 65537, 32, -1376250, 65537, 32, -1376254, 65537, 32, -1376255, 65537, 32, -1376256, 65537, 32, -1376241, 65537, 32, -1376240, 65537, 32, -1376251, 65537, 32, -1376252, 65537, 32, -1376253, 65537, 32, -983041, 65537, 32, -1048577, 65537, 32, -1114113, 65537, 32, -1179649, 65537, 32, -1245185, 65537, 32, -1310721, 65537, 32, 11, 1, 30, 8, 1, 30, 5, 1, 30, 2, 1, 30)
+
+[node name="Player" parent="." instance=ExtResource("2_cbkf4")]
+position = Vector2(83, -428)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, -316)
+
+[node name="Sky" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(576.25, -316.5)
+scale = Vector2(1.99913, 1.99691)
+texture = ExtResource("4_kphro")
+
+[node name="BuildingsLevel1" type="Sprite2D" parent="Sky"]
+texture = ExtResource("5_kmnop")
+
+[node name="BuildingsLevel2" type="Sprite2D" parent="Sky/BuildingsLevel1"]
+texture = ExtResource("6_t7c3t")
+
+[node name="BuildingsLevel3" type="Sprite2D" parent="Sky/BuildingsLevel1/BuildingsLevel2"]
+texture = ExtResource("7_ybidf")
+
+[node name="FinishNode" parent="." instance=ExtResource("8_h52mn")]
+position = Vector2(768, -33)
+scale = Vector2(-38.303, -2.984)
+
+[node name="LevelCompleteDisplay" parent="." instance=ExtResource("9_yrw71")]
+offset_top = -640.0
+offset_bottom = -640.0
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_qdg85")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ri4d1")
+autoplay = true

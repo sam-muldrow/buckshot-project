@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpr007syrq78q"]
+
+[ext_resource type="Script" path="res://Scripts/Player/GunDrop.cs" id="1_gcns5"]
+[ext_resource type="Texture2D" uid="uid://c8k33h3lmekwb" path="res://PlayerSprites/Guns/3_1.png" id="2_d4clq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yk26g"]
+size = Vector2(27, 9)
+
+[node name="GunBody" type="CharacterBody2D"]
+script = ExtResource("1_gcns5")
+
+[node name="GunSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_d4clq")
+
+[node name="GunCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yk26g")

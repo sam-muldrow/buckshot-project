@@ -1,0 +1,18 @@
+{
+  "name": "buck-shot-server",
+  "version": "1.0.0",
+  "description": "The shot to the buck to the server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://oss.iol.unh.edu/smuldrow/buck-shot-server.git"
+  },
+  "author": "",
+  "license": "Unlicense",
+  "dependencies": {
+    "bcrypt": "^5.1.0"
+  }
+}

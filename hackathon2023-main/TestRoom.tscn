@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cywtgrot43m0k"]
+
+[ext_resource type="PackedScene" uid="uid://bb5r16orojlbf" path="res://TileMap.tscn" id="1_d7bfv"]
+[ext_resource type="PackedScene" uid="uid://d1hgvspw0q057" path="res://death_scene.tscn" id="1_uomgs"]
+[ext_resource type="PackedScene" uid="uid://ckj557bmxn2n7" path="res://player.tscn" id="2_jus23"]
+[ext_resource type="PackedScene" uid="uid://c5byudu83xm32" path="res://GunBot.tscn" id="4_r57gi"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_fjwvl"]
+vertices = PackedVector2Array(-368, -398, -385, -447, 30, -450, 29, -422, -509, 86, -541, 87, -536, 50, -570, 53, -572, -13, 370, -32, 398, -23, 408, 149, -443, 153, -444, 109, 317, -386, 412, -386, 410, -234, 375, -229, -601, -13, -601, -149, -552, -156, -488, -341, 317, -417, -504, 115)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 10, 11, 12, 13), PackedInt32Array(14, 15, 16, 17), PackedInt32Array(8, 18, 19, 20), PackedInt32Array(6, 8, 20, 21, 0, 3, 22, 14, 13, 4), PackedInt32Array(13, 23, 4), PackedInt32Array(17, 9, 13, 14)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-385, -447, 30, -450, 29, -422, 317, -417, 317, -386, 412, -386, 410, -234, 375, -229, 370, -32, 398, -23, 408, 149, -443, 153, -444, 109, -504, 115, -509, 86, -541, 87, -536, 50, -570, 53, -572, -13, -601, -13, -601, -149, -552, -156, -488, -341, -368, -398)])
+
+[node name="Level" type="Node2D"]
+position = Vector2(-2, 0)
+
+[node name="TileMap" parent="." instance=ExtResource("1_d7bfv")]
+layer_0/tile_data = PackedInt32Array(393202, 1, 28, 393203, 1, 28, 393204, 1, 28, 393205, 1, 28, 393206, 1, 28, 393207, 1, 28, 393208, 1, 28, 393209, 1, 28, 393210, 1, 28, 393211, 1, 28, 393212, 1, 28, 393213, 1, 28, 393214, 1, 28, 393215, 1, 28, 327680, 1, 28, 327681, 1, 28, 327682, 1, 28, 327683, 1, 28, 327684, 1, 28, 327685, 1, 28, 327686, 1, 28, 327687, 1, 28, 327688, 1, 28, 327689, 1, 28, 327690, 1, 28, 327691, 1, 28, 327692, 1, 28, 327693, 1, 28, 262157, 1, 28, 196621, 1, 28, 131085, 1, 28, 65549, 1, 28, 13, 1, 28, -65523, 1, 28, -131059, 1, 28, -131060, 1, 28, -196596, 1, 28, -262132, 1, 28, -327668, 1, 28, -393204, 1, 28, -458740, 1, 28, -458739, 1, 28, -524275, 1, 28, -589811, 1, 28, -655347, 1, 28, -720883, 1, 28, -786419, 1, 28, -851955, 1, 28, -851956, 1, 28, -851957, 1, 28, -851958, 1, 28, -917495, 1, 28, -917496, 1, 28, -917497, 1, 28, -917498, 1, 28, -917499, 1, 28, -917500, 1, 28, -917501, 1, 28, -917502, 1, 28, -917503, 1, 28, -983040, 1, 28, -917505, 1, 28, -917506, 1, 28, -917507, 1, 28, -917508, 1, 28, -917509, 1, 28, -917510, 1, 28, -917511, 1, 28, -917512, 1, 28, -917513, 1, 28, -917514, 1, 28, -917515, 1, 28, -917516, 1, 28, -917517, 1, 28, -851981, 1, 28, -851982, 1, 28, -786447, 1, 28, -786448, 1, 28, -720912, 1, 28, -720913, 1, 28, -655377, 1, 28, -589842, 1, 28, -524306, 1, 28, -524307, 1, 28, -458771, 1, 28, -393235, 1, 28, -327699, 1, 28, -327700, 1, 28, -262164, 1, 28, -196628, 1, 28, -131092, 1, 28, -65556, 1, 28, -20, 1, 28, 65516, 1, 28, 65517, 1, 28, 131053, 1, 28, 196589, 1, 28, 196590, 1, 28, 262126, 1, 28, 262127, 1, 28, 327664, 1, 28, 327665, 1, 28, 393201, 1, 28)
+
+[node name="Player" parent="." instance=ExtResource("2_jus23")]
+position = Vector2(-338, -13)
+
+[node name="GunBot" parent="." instance=ExtResource("4_r57gi")]
+position = Vector2(36, 116)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-91, -143)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_fjwvl")
+
+[node name="death_scene" parent="." instance=ExtResource("1_uomgs")]
+offset_left = -664.0
+offset_top = -469.0
+offset_right = -664.0
+offset_bottom = -469.0
+scale = Vector2(1, 1.006)
